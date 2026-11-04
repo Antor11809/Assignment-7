@@ -12,7 +12,7 @@ const NavLinks = async () => {
       {data.map((i) => (
         <Link
           key={i.id}
-          href={"/category/" + i.slug}
+          href={`/category/${i.slug}`}
           className="shrink-0 text-sm sm:text-base hover:text-green-700"
         >
           {i.id === "dal" ? "🥣" : i.icon} {i.nameBn}
