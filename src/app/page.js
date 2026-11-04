@@ -1,3 +1,4 @@
+import Allproducts from "@/components/Allproducts";
 import Hero from "@/components/Hero";
 import Marque from "@/components/Marque";
 import ProductSection from "@/components/ProductSection";
@@ -12,10 +13,14 @@ export default function Home() {
   <Hero />
 </Suspense>
 
-
   <Suspense fallback={<p>পণ্য লোড হচ্ছে...</p>}>
   <ProductSection />
 </Suspense>
+
+<Suspense fallback={<p>লোড হচ্ছে...</p>}>
+<Allproducts/>
+</Suspense>
+
     </div>
   );
 }

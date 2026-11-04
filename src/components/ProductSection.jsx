@@ -19,7 +19,7 @@ const ProductSection = async () => {
 return (
   <section className="max-w-6xl mx-auto px-4 mt-10">
 
-    <h2 className="text-xl font-bold mb-4">
+    <h2 className="text-lg font-black mb-4">
       <span className="text-red-600">▲</span> আজ দাম বেড়েছে
     </h2>
 
@@ -29,7 +29,7 @@ return (
       ))}
     </div>
 
-    <h2 className="text-xl font-bold mt-10 mb-4">
+    <h2 className="text-lg font-black mt-10 mb-4">
       <span className="text-green-600">▼</span> আজ দাম কমেছে
     </h2>
 
