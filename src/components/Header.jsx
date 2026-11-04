@@ -1,6 +1,7 @@
 import NavLinks from "./NavLinks";
 import { connection } from "next/server";
 
+
 const Header = async () => {
   await connection();
 
