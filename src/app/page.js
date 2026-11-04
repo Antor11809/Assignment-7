@@ -7,7 +7,6 @@ import { Suspense } from "react";
 export default function Home() {
   return (
     <div>
-  <Marque/>
 
 <Suspense fallback={<p>লোড হচ্ছে...</p>}>
   <Hero />
