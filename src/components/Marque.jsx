@@ -1,3 +1,4 @@
+
 import MarqueeText from "react-marquee-text";
 import "react-marquee-text/dist/styles.css";
 import Link from "next/link";
@@ -7,7 +8,7 @@ const Marque = async () => {
   const data = await res.json();
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-2 sm:px-4 border border-gray-200 mt-3 sm:mt-5 overflow-hidden">
+    <div className="w-full border border-gray-200 mt-3 sm:mt-5 overflow-hidden">
       <MarqueeText direction="right" duration={10}>
         <div className="flex items-center gap-2 py-3">
           {data.map((mark) => (
