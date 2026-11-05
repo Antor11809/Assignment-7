@@ -1,19 +1,13 @@
-import { connection } from "next/server";
 import React from "react";
 
-const Hero = async () => {
-  await connection();
-
-  const date = new Date().toLocaleDateString("bn-BD", {
-    dateStyle: "full",
-    timeZone: "Asia/Dhaka",
-  });
+const Hero = () => {
+  const date = "আজকের বাজারদর";
 
   return (
     <section className="bg-amber-100 rounded-2xl flex flex-col lg:flex-row items-center justify-between mt-6 lg:mt-10 mx-4 sm:mx-10 lg:mx-25 gap-6 lg:gap-10 p-4 sm:p-6">
 
       <div className="w-full lg:w-2/3">
-        <p className="inline-block text-purple-700 text-sm sm:text-md mb-3 p-1 rounded-2xl bg-green-200">
+        <p className="inline-block text-purple-700 text-sm sm:text-base mb-3 p-1 rounded-2xl bg-green-200">
           {date}
         </p>
 
@@ -42,8 +36,8 @@ const Hero = async () => {
           alt="Bazar Hero"
         />
       </div>
+
     </section>
-    
   );
 };
 

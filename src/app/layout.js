@@ -3,9 +3,12 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Marque from "@/components/Marque";
 import Footer from "@/components/Footer";
+import { Suspense } from "react";
+import { Toaster } from "react-hot-toast";
 
 const notoserifbengali = Noto_Serif_Bengali({
   subsets: ["latin", "bengali"],
+   
 });
 
 export const metadata = {
@@ -17,13 +20,17 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+       data-theme="light"
       className={`${notoserifbengali.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header/>
+       <Suspense fallback={<p>Navbar লোড হচ্ছে...</p>}>
+  <Header />
+</Suspense>
         <Marque/>
         {children}
         <Footer/>
+         <Toaster />
         </body>
     </html>
   );

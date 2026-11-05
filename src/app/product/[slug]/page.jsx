@@ -96,7 +96,7 @@ const ProductDetails = async ({ params }) => {
           </div>
 
           <div className="bg-[#f0f5f1] rounded-xl p-4 sm:text-right">
-            <p className="text-sm text-gray-500">আজকের দাম</p>
+            <p className="text-sm text-cyan-600">আজকের দাম</p>
 
             <h2 className="text-2xl font-black">
               {bn(product.today)} টাকা
@@ -130,7 +130,7 @@ const ProductDetails = async ({ params }) => {
 
             <div className="border border-gray-200 rounded-xl p-4">
               <p className="text-sm text-gray-500">সর্বনিম্ন দাম</p>
-              <h3 className="text-2xl font-bold text-green-700 mt-2">
+              <h3 className="text-2xl font-bold text-amber-600 mt-2">
                 {bn(minPrice)} টাকা
               </h3>
               <p className="text-xs text-gray-500 mt-1">সকল বাজারের মধ্যে</p>
