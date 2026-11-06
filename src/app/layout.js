@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 
+export const instant = false;
+
 const notoserifbengali = Noto_Serif_Bengali({
   subsets: ["latin", "bengali"],
    
@@ -23,11 +25,16 @@ export default function RootLayout({ children }) {
        data-theme="light"
       className={`${notoserifbengali.className} h-full antialiased`}
     >
+
       <body className="min-h-full flex flex-col">
        <Suspense fallback={<p>Navbar লোড হচ্ছে...</p>}>
   <Header />
 </Suspense>
-        <Marque/>
+
+        <Suspense fallback={<p>Loading...</p>}>
+  <Marque />
+</Suspense>
+
         {children}
         <Footer/>
          <Toaster />

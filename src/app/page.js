@@ -4,6 +4,8 @@ import Marque from "@/components/Marque";
 import ProductSection from "@/components/ProductSection";
 import { Suspense } from "react";
 
+export const instant = false;
+
 export default function Home() {
   return (
     <div>

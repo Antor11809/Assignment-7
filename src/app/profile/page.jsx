@@ -16,7 +16,7 @@ const Page = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
 
-    const { data, error } = await authClient.updateUser({
+    const { error } = await authClient.updateUser({
       name,
     });
 
@@ -67,7 +67,6 @@ const Page = () => {
 
   return (
     <div className="min-h-[75vh] bg-[#f1f7f2] px-4 py-14">
-
       <div className="max-w-xl mx-auto">
 
         <h2 className="text-2xl font-bold text-black">
@@ -83,11 +82,12 @@ const Page = () => {
 
           <div className="flex items-center gap-4 min-w-0">
             <div className="avatar">
-              <div className="w-14 rounded-full">
+              <div className="w-14 h-14 rounded-full overflow-hidden">
                 {user.image ? (
                   <img
                     src={user.image}
                     alt="Profile"
+                    className="w-full h-full object-cover"
                   />
                 ) : (
                   <div className="w-full h-full bg-green-100 flex items-center justify-center text-green-700 text-xl font-bold">
@@ -98,7 +98,7 @@ const Page = () => {
             </div>
 
             <div className="min-w-0">
-              <h3 className="font-semibold text-black truncate">
+              <h3 className="font-semibold text-black truncate text-lg">
                 {user.name}
               </h3>
               <p className="text-sm text-gray-500 truncate">
@@ -110,10 +110,11 @@ const Page = () => {
           <button
             type="button"
             onClick={handleSignOut}
-            className="btn btn-outline btn-error btn-sm"
+            className="btn btn-outline btn-error btn-sm shrink-0"
           >
             → সাইন আউট
           </button>
+
         </div>
 
         {/* Update Form */}
