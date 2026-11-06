@@ -21,6 +21,7 @@ BazarDor is a modern web application that helps users explore daily market price
 
 - Next.js 16
 - React.js
+- JavaScript
 - Tailwind CSS
 - DaisyUI
 - Better Auth
@@ -32,20 +33,24 @@ BazarDor is a modern web application that helps users explore daily market price
 1. Clone the repository.
 2. Install dependencies:
 
+   ```bash
    npm install
+   ```
 
 3. Configure environment variables in `.env.local`.
 
 4. Start the development server:
 
+   ```bash
    npm run dev
+   ```
 
 5. Open http://localhost:3000
 
 ## Live Website
 
-Add your deployed website link here.
+https://assignment-7-sigma-ten.vercel.app/
 
 ## GitHub Repository
 
-Add your GitHub repository link here.
+https://github.com/Antor11809/Assignment-7
